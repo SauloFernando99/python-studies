@@ -1,19 +1,16 @@
-#Divisible by 10, 5 or 2
+#Triangle
 
-number = int(input("Provide a integer number: "))
-dividers = []
+side1 = int(input("Insert size one: "))
+side2 = int(input("Insert size two: "))
+side3 = int(input("Insert size three: "))
 
-if not number % 10:
-    dividers.append(10)
+if (side1 > (side2+side3) or side2 > (side3+side1) or side3 > (side2+side1)):
+    print("Those sides cannot form a triangle")
+else:
+    if side1 == side2 == side3:
+        print("Equilateral triangle")
+    elif side1 == side2 != side3 or side1 == side3 != side2 or side2 == side3 != side1:
+        print("Isosceles triangle")
+    else:
+        print("Scalene triangle")
 
-if not number % 5:
-    dividers.append(5)
-
-if not number % 2:
-    dividers.append(2)
-
-if len(dividers) == 0:
-    print(f"{number} isn't divisible by 10, 5 or 2")
-
-for divisor in dividers:
-    print(f"{number} is divisible by {divisor}")

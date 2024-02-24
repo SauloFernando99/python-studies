@@ -1,16 +1,18 @@
-#Student's grade on test, student's grade on assignments and student's attendance
+#BMI
 
-grade = float(input("Student's grade on test: "))
-assignments = float(input("Student's grade on assignments: "))
-attendance = float(input("Student's grade on attendance: "))
+weight = float(input("Input the weight: "))
+height = float(input("Input the height: "))
 
-average = (0.3 * assignments) + (0.7 * grade)
+bmi = weight/(height**2)
 
-if (average >= 6.0 and attendance >= 75.0):
-    print("Student approved")
-elif (average < 6.0 and average >= 4.0 and attendance >= 75.0):
-    print("Student must make recovery")
-elif (average < 4.0 or attendance < 75.0):
-    print("Student reproved")
+print(f"Body mass indice: {bmi}")
 
+if bmi < 18.5:
+    print("Weight above normal")
+elif 18.5 <= bmi < 25:
+    print("Normal weight")
+elif 25 <= bmi < 30:
+    print("Overweight")
+else:
+    print("Obese")
 

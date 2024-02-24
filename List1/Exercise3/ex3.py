@@ -1,12 +1,20 @@
-#Read 5 numbers and count how many of then are bigger than 10
+#Land value calculator
 
-count = 0
+width = float(input("Insert width: "))
+length = float(input("Insert length: "))
 
-for i in range(5):
-    num = int(input(f"number {i+1}: "))
-    if num > 10:
-        count += 1
+area = width*length
 
-print(f"Numbers bigger than 10: {count}")
+city = input("The land is in São Paulo or Curitiba? ")
+
+while city not in ["São Paulo", "Curitiba"]:
+    city = input("Unknown city, choose São Paulo or Curitiba: ")
+
+print(f"You choose: {city}")
+
+if city == "São Paulo":
+    print(f"Land price: {(area * 500.00)}")
+else:
+    print(f"Land price: {(area * 450.00)}")
 
 

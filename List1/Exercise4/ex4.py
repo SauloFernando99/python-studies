@@ -1,20 +1,16 @@
-#Land value calculator
+#Student's grade on test, student's grade on assignments and student's attendance
 
-width = float(input("Insert width: "))
-length = float(input("Insert length: "))
+grade = float(input("Student's grade on test: "))
+assignments = float(input("Student's grade on assignments: "))
+attendance = float(input("Student's grade on attendance: "))
 
-area = width*length
+average = (0.3 * assignments) + (0.7 * grade)
 
-city = input("The land is in São Paulo or Curitiba? ")
-
-while city not in ["São Paulo", "Curitiba"]:
-    city = input("Unknown city, choose São Paulo or Curitiba: ")
-
-print(f"You choose: {city}")
-
-if city == "São Paulo":
-    print(f"Land price: {(area * 500.00)}")
-else:
-    print(f"Land price: {(area * 450.00)}")
+if (average >= 6.0 and attendance >= 75.0):
+    print("Student approved")
+elif (average < 6.0 and average >= 4.0 and attendance >= 75.0):
+    print("Student must make recovery")
+elif (average < 4.0 or attendance < 75.0):
+    print("Student reproved")
 
 

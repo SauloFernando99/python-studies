@@ -1,18 +1,29 @@
-#BMI
+#Kitchen dimensions for tiles
 
-weight = float(input("Input the weight: "))
-height = float(input("Input the height: "))
 
-bmi = weight/(height**2)
+length = float(input("Insert length: "))
+width = float(input("Insert width: "))
+height = float(input("Insert height: "))
 
-print(f"Body mass indice: {bmi}")
+def AreaCalculator(length, width, height):
 
-if bmi < 18.5:
-    print("Weight above normal")
-elif 18.5 <= bmi < 25:
-    print("Normal weight")
-elif 25 <= bmi < 30:
-    print("Overweight")
-else:
-    print("Obese")
+    wallType1 = (length * height) * 2
+    wallType2 = (width * height) * 2
+
+    totalWallArea = wallType1 + wallType2
+
+    return totalWallArea
+
+def TilesCalculator(length, width, height):
+
+    totalArea = AreaCalculator(length, width, height)
+
+    totalTilesBoxes = totalArea/2
+
+    return totalTilesBoxes
+
+print(f"Total number of tiles boxes is: {TilesCalculator(length, width, height)}")
+
+
+
 

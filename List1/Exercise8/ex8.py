@@ -1,14 +1,6 @@
-# Credit line
+#Numerator and Denominator
 
-salary = float(input("Insert functionary salary: "))
-installment = float(input("Insert installment: "))
+numerator = int(input("Input numerator: "))
+denominator = int(input("Input denominator: "))
 
-
-def CreditLiberation(salary, installment):
-    if installment <= (salary * 0.3):
-        print("Credit approved")
-    else:
-        print("Credit reproved")
-
-
-CreditLiberation(salary, installment)
+print(numerator/denominator)

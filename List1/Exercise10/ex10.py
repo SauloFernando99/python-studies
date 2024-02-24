@@ -1,8 +1,8 @@
-#Odd or Even
+#Divisible by 3
 
-number = int(input("Provide a number: "))
+number = int(input("Provide a integer number: "))
 
-if number % 2:
-    print(f"Number {number} is Odd")
+if number % 3:
+    print(f"{number} isn't divisible by 3")
 else:
-    print(f"Number {number} is Even")
+    print(f"{number} is divisible by 3")
