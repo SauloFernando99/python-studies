@@ -17,8 +17,8 @@ def main():
             raise ValueError("Total cars sold must be an positive integer number")
         else:
             for i in range(total_cars_sold):
-                car_price = float(input(f"Insert car {i} price: "))
-                car_model = str(input(f"Insert car {i} model: "))
+                car_price = float(input(f"Insert car {i + 1} price: "))
+                car_model = str(input(f"Insert car {i + 1} model: "))
 
                 total_sold_value += car_price
 
