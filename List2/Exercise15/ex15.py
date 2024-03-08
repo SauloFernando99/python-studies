@@ -7,11 +7,13 @@ def find_even_numbers(first_number, second_number):
 
     return even_numbers_list
 
+
 def print_even_numbers(even_number_list):
     print("Even numbers in the interval:")
 
     for i in range(len(even_number_list)):
         print(f"{i + 1}: {even_number_list[i]}")
+
 
 def sum_even_numbers(even_number_list):
     even_numbers_sum = 0
@@ -20,6 +22,7 @@ def sum_even_numbers(even_number_list):
         even_numbers_sum += even_number_list[i]
 
     return even_numbers_sum
+
 
 def print_even_numbers_sum(even_numbers_sum):
     print(f"Total sum of all even numbers in the interval: {even_numbers_sum}")
