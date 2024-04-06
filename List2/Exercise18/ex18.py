@@ -1,7 +1,7 @@
 from List2.Exercise18.country import Country
 
 
-def calculate_number_of_years(country1, country2):
+def calculate_number_of_years_to_overcome(country1, country2):
     years_counter = 0
     total_country1_population = country1.population
     total_country2_population = country2.population
@@ -19,7 +19,7 @@ def main():
     country2 = Country(7000000, 2)
 
     print(f"Number of years necessary to country1's population overcome country2's population: " +
-          f"{calculate_number_of_years(country1, country2)}")
+          f"{calculate_number_of_years_to_overcome(country1, country2)}")
 
 
 if __name__ == "__main__":
