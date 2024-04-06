@@ -47,6 +47,9 @@ def percent_age_between_10_30_height_above_90(subjects_list):
         if people.height > 190:
             height_above_190_count += 1
 
+    if height_above_190_count == 0:
+        return 0
+
     subjects_percent = (both_conditions_meet_count / height_above_190_count) * 100
 
     return subjects_percent
