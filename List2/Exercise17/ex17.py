@@ -1,4 +1,4 @@
-from List2.Exercise17.people import People
+from List2.Exercise17.person import Person
 
 
 def register_subjects(subjects_number):
@@ -8,7 +8,7 @@ def register_subjects(subjects_number):
         weight = int(input(f"Insert subject {i+1} weight in kilos: "))
         height = int(input(f"Insert subject {i+1} height in centimeters: "))
 
-        people = People(age, weight, height)
+        people = Person(age, weight, height)
 
         subjects_list.append(people)
 
