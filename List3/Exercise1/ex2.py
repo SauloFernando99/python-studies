@@ -29,7 +29,7 @@ def mean_age_from_corinthians_players_with_weight_above_80(players):
     if total_players == 0:
         return 0
 
-    return age_sum/total_players
+    return age_sum / total_players
 
 
 def percentage_of_players_with_age_under_20(players):
@@ -43,7 +43,7 @@ def percentage_of_players_with_age_under_20(players):
     if total_players_with_age_under_20 == 0:
         return 0
 
-    return (total_players_with_age_under_20/total_players) * 100
+    return (total_players_with_age_under_20 / total_players) * 100
 
 
 def younger_player_with_weight_above_70(players):
@@ -58,6 +58,16 @@ def younger_player_with_weight_above_70(players):
     return younger_player
 
 
+def amount_of_players_from_santos_with_age_above_20_or_weight_equal_or_lower_than_65(players):
+    players_count = 0
+
+    for player in players:
+        if player[3] == "santos" and (player[1] > 20 or player[2] <= 65):
+            players_count += 1
+
+    return players_count
+
+
 def main():
     players = registry_players()
 
@@ -65,7 +75,8 @@ def main():
           f"{mean_age_from_corinthians_players_with_weight_above_80(players)}")
     print(f"Percentage o players with age under 20: {percentage_of_players_with_age_under_20(players)}")
     print(f"Younger player with weight above 70: {younger_player_with_weight_above_70(players)}")
-
+    print(f"Amount of players of Santos with age above 20 years or weight equal or lower than 65: "
+          f"{amount_of_players_from_santos_with_age_above_20_or_weight_equal_or_lower_than_65(players)}")
 
 
 if __name__ == "__main__":
