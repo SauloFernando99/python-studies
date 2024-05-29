@@ -26,7 +26,24 @@ def mean_age_from_corinthians_players_with_weight_above_80(players):
             total_players += 1
             age_sum += player[1]
 
+    if total_players == 0:
+        return 0
+
     return age_sum/total_players
+
+
+def percentage_of_players_with_age_under_20(players):
+    total_players = len(players)
+    total_players_with_age_under_20 = 0
+
+    for player in players:
+        if player[1] < 20:
+            total_players_with_age_under_20 += 1
+
+    if total_players_with_age_under_20 == 0:
+        return 0
+
+    return (total_players_with_age_under_20/total_players) * 100
 
 
 def main():
@@ -34,6 +51,7 @@ def main():
 
     print(f"Mean age of players from Corinthians and weight above 80 kilos: "
           f"{mean_age_from_corinthians_players_with_weight_above_80(players)}")
+    print(f"Percentage o players with age under 20: {percentage_of_players_with_age_under_20(players)}")
 
 
 if __name__ == "__main__":
