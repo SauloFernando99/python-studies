@@ -46,12 +46,26 @@ def percentage_of_players_with_age_under_20(players):
     return (total_players_with_age_under_20/total_players) * 100
 
 
+def younger_player_with_weight_above_70(players):
+    younger_player = ""
+    lower_age = float('inf')
+
+    for player in players:
+        if player[1] < lower_age and player[2] > 70:
+            younger_player = player[0]
+            lower_age = player[2]
+
+    return younger_player
+
+
 def main():
     players = registry_players()
 
     print(f"Mean age of players from Corinthians and weight above 80 kilos: "
           f"{mean_age_from_corinthians_players_with_weight_above_80(players)}")
     print(f"Percentage o players with age under 20: {percentage_of_players_with_age_under_20(players)}")
+    print(f"Younger player with weight above 70: {younger_player_with_weight_above_70(players)}")
+
 
 
 if __name__ == "__main__":
