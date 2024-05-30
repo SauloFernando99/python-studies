@@ -15,12 +15,13 @@ def verify_prime_numbers(number):
         prime_number = is_prime_number(i)
 
         if prime_number == "yes":
-            print(f"{i}")
+            print(f"{i}", end=" ")
 
 
 def main():
     number = int(input("Insert number: "))
 
+    print("Prime numbers: ", end="")
     verify_prime_numbers(number)
 
 
