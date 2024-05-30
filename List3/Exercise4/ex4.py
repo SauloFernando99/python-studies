@@ -5,7 +5,7 @@ def print_sequence(numerator):
     for i in range(numerator - 1):
         print(f"{i + 2}/{(i + 2) * (i + 2)}", end="")
 
-        if i < numerator - 2:  # Verifica se não é o último elemento
+        if i < numerator - 2:
             print(plus_minus, end="")
 
             if plus_minus == " - ":
